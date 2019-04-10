@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article" lang="zh-TW">
+<!--page default Information-->
+<!--html head-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge,chrome=1">
+    <title>pageTitle</title>
+    <meta name="description" content="pageDesc">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
+    <meta itemprop="name" content="pageTitle">
+    <meta itemprop="description" content="pageDesc">
+    <meta itemprop="image" content="指定顯示圖片">
+    <meta property="og:title" content="pageTitle">
+    <meta property="og:description" content="pageDesc">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="指定顯示圖片">
+    <link rel="Shortcut Icon" type="images/x-icon" href="../images/fav.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="//console.re/connector.js" data-channel="friendo" id="consolerescript"></script>
+</head>
+<!--html body-->
+
+<body>
+    <div class="l-wrap" id="app" v-cloak>
+        <div class="l-main">
+            <section class="sample" id="el">
+                <div class="sample__hd"></div>
+                <div class="sample__bd"></div>
+                <div class="sample__ft"></div>
+                <section>
+                    <div class="l-container">
+                        <h2>{{initText}}</h2>
+                        <div class="vue">
+                            <form v-on:submit.prevent="signup">
+                                <select v-model="selectOpt">
+                    <option v-for="obj in selectLists" :disabled="obj.value == ''" v-bind:value="obj.value">{{obj.text}}</option>
+                  </select>
+                                <p>select Val : {{selectOpt}}</p>
+                                <button type="submit">submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sample__content">
+                        <div class="l-container">
+                            <div class="l-vm">
+                                <div class="l-vm__content">
+                                    <h2>demo verticle</h2>
+                                    <p>灰色區塊內垂直置中</p>
+                                    <div class="sprite__demo"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="l-container">
+                        <div class="mdDemo">
+                            <h2>#jade scss example</h2>
+                            <div>
+                                <h3>##<span>Interpolation</span>by jade</h3>
+                            </div>
+                            <div>
+                                <h3>##jade loop</h3>
+                                <div class="row1">
+                                    <p>row+1</p>
+                                </div>
+                                <div class="row2">
+                                    <p>row+2</p>
+                                </div>
+                                <div class="row3">
+                                    <p>row+3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <!--render main view-->
+        </div>
+    </div>
+    <script type="text/javascript" src="js/vendor.js"></script>
+    <script type="text/javascript" src="js/lib.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.1/pixi.min.js"></script>
+    <script type="text/javascript" id="appjs" src="js/app.js?v=1545444295792" data-mode="true" data-site="//carrefourautumn.azurewebsites.net/events/"></script>
+    <script src="js/sample.js?v=1545444295792"></script>
+    <script type="text/javascript"></script>
+</body>
+
+</html>
